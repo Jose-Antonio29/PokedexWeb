@@ -39,7 +39,7 @@ body {
 
 .card {
   background-color: white;
-  width: 326px;
+  width: 400px;
   border-radius: 16px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
