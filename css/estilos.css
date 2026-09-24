@@ -7,13 +7,15 @@
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -21,20 +23,18 @@ body {
   background-color: var(--dark-cyan);
   background-image: url("../images/backgroundPoke.jpeg");
   background-repeat: no-repeat, no-repeat;
- 
+  background-size: cover;
+
 }
+
 
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50vh;
 }
 
 .card {
@@ -43,7 +43,7 @@ body {
   border-radius: 16px;
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .card-header {
@@ -59,11 +59,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid rgba(153, 153, 153, 0.383);
 }
 
@@ -98,7 +98,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .card-footer-social {
@@ -110,4 +110,5 @@ body {
 .card-footer-social p {
   letter-spacing: 1px;
 }
+
 /*# sourceMappingURL=estilos.css.map */
