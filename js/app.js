@@ -27,6 +27,7 @@ async function fetchData(id) {
 // Función encargada de pintar la template
 function pintarCard(pokemon) {
     console.log(pokemon)
+    const type = pokemon.types[0].type.name
     const flex = document.querySelector('.flex')
     const template = document.querySelector('#template-card').content
     const clone = template.cloneNode(true)
@@ -38,7 +39,7 @@ function pintarCard(pokemon) {
     `${pokemon.name} <span>${pokemon.stats[0].base_stat} Hp<span>`;
     
     clone.querySelector('.card-body-text').textContent =
-    pokemon.base_experience + "exp";
+    type +  " type";
     
     clone.querySelectorAll('.card-footer-social h3')[0].textContent = 
     pokemon.stats[1].base_stat;
@@ -52,7 +53,6 @@ function pintarCard(pokemon) {
     clone.querySelectorAll('.card-footer-social h3')[3].textContent = 
     pokemon.stats[4].base_stat;
     
-    const type = pokemon.types[0].type.name
     console.log(type)
     const typeImg = "./images/tipos/"+type+".jpg"
 
