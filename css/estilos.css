@@ -29,12 +29,15 @@ body {
 
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 50vh;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  column-count: 3;
+  column-gap: 50px;
+  row-gap: 20px;
 }
 
 .card {
@@ -44,6 +47,28 @@ body {
   overflow: hidden;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+
+  40% {
+    transform: translateY(0px);
+  }
+
+  60% {
+    transform: translateY(-2px);
+  }
+
+  80% {
+    transform: translateY(-0px);
+  }
 }
 
 .card-header {

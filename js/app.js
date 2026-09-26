@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', init);
 
 
-function init() {
+async function init() {
+    const pokemons = [];
+
     for (let i = 1; i <= 151; i++) {
-        fetchData(i)
+        pokemons.push(fetchData(i));
     }
+
+    const pokemonList = await Promise.all(pokemons);
+
+    pokemonList.forEach(pokemon => {
+        pintarCard(pokemon)
+    })
 }
-x
 
 async function fetchData(id) {
     try {
         const res = await fetch('https://pokeapi.co/api/v2/pokemon/' + id)
         const data = await res.json()
-        pintarCard(data)
+
+        return data;
 
     } catch (error) {
         console.log(error);
